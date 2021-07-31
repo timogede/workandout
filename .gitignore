@@ -1,0 +1,11 @@
+*/public/wp-admin
+*/public/wp-includes
+node_modules
+*/public/.htaccess
+*/public/index.php
+*/public/*.php
+*/public/license.txt
+*/public/readme.html
+conf
+logs
+package-lock.json

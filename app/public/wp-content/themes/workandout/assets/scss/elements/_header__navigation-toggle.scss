@@ -1,0 +1,60 @@
+.header__navigation-toggle {
+  @include viewport-7 {
+    display: none;
+  }
+}
+
+.header__navigation-toggle {
+  position: fixed;
+  left: 60px;
+  top: 50px;
+  padding: 0;
+  border-radius: 0;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  background: transparent;
+  transition: background 500ms, top 250ms;
+  z-index: 110;
+}
+
+.header__navigation-toggle__bar {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 2px;
+  width: 35px;
+  height: 4px;
+  background: var(--black);
+  transition: all 200ms;
+  will-change: left, top;
+
+  &:nth-child(2) {
+    top: 12px;
+  }
+
+  &:nth-child(3) {
+    top: 22px;
+  }
+}
+
+//active
+body.header__navigation-toggle--open {
+  .header__navigation-toggle__bar {
+    background: var(--white);
+  }
+
+  .header__navigation-toggle__bar:nth-child(1) {
+    transform: rotate(405deg);
+    top: 8px;
+  }
+
+  .header__navigation-toggle__bar:nth-child(2) {
+    height: 0;
+  }
+
+  .header__navigation-toggle__bar:nth-child(3) {
+    transform: rotate(-225deg);
+    top: 8px;
+  }
+}

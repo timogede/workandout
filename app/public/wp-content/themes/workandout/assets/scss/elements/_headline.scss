@@ -1,0 +1,131 @@
+.headline {
+  h2 {
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0;
+    font-weight: var(--font-weight-bold);
+    font-size: 40px;
+    @include viewport-4 {
+      font-size: 60px;
+    }
+    @include viewport-7 {
+      font-size: 80px;
+    }
+    @include viewport-9 {
+      font-size: 90px;
+    }
+    @include viewport-12 {
+      font-size: 120px;
+    }
+  }
+  h3 {
+    text-transform: uppercase;
+    padding: 0;
+    margin: 10px 0 0 0;
+    font-weight: var(--font-weight-regular);
+    font-size: 20px;
+    @include viewport-4 {
+      font-size: 30px;
+    }
+    @include viewport-7 {
+      font-size: 30px;
+    }
+    @include viewport-9 {
+      font-size: 30px;
+    }
+  }
+}
+
+.headline__text-wrap {
+  display: flex;
+  padding: 60px 0;
+  flex-direction: column;
+}
+
+.headline--color-black.headline {
+  background-color: var(--black);
+  h2,
+  h3 {
+    color: white;
+  }
+}
+
+.headline--color-white.headline {
+  background-color: white;
+  h2,
+  h3 {
+    color: var(--black);
+  }
+}
+
+.headline--color-brand.headline {
+  background-color: var(--brand-primary);
+  h2,
+  h3 {
+    color: var(--black);
+  }
+}
+
+.headline--alignment-center {
+  .headline__text-wrap {
+    h2,
+    h3 {
+      text-align: center;
+    }
+  }
+}
+
+.headline--alignment-left {
+  .headline__text-wrap {
+    h2,
+    h3 {
+      text-align: left;
+    }
+  }
+}
+
+.headline--alignment-right {
+  .headline__text-wrap {
+    h2,
+    h3 {
+      text-align: right;
+    }
+  }
+}
+
+.headline-push--visible {
+  .headline__text-column {
+    padding-left: 0;
+    @include viewport-9 {
+      padding-left: 45%;
+    }
+  }
+}
+
+.headline__hand-image {
+  position: absolute;
+  width: 250px;
+  right: -30px;
+  top: -120px;
+
+  @include viewport-9 {
+    width: 550px;
+    right: -300px;
+    top: -330px;
+  }
+
+  svg {
+    transform: rotate(-25deg);
+    .text {
+      display: none;
+    }
+  }
+}
+
+.headline.headline-hand--visible {
+  overflow-x: clip;
+  margin-top: 150px;
+  @include viewport-9 {
+    margin-top: 350px;
+  }
+}

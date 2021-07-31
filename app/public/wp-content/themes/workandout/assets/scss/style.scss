@@ -1,0 +1,38 @@
+/*
+Theme Name: WorkAndOut
+Theme URI: https://workandout.de
+Author: Timo Gede
+Author URI: https://timogede.com
+Description: A Wordpress theme I developed on an old mountain. ⛰️
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: Old Mountain
+Tags: old, mountain, ⛰️, workandout
+Go climb a mountain, then a vulcano.
+*/
+@import "_variables.scss";
+@import "_fontsize.scss";
+@import "_normalize.scss";
+
+@import "components/_buttons.scss";
+@import "components/_container.scss";
+
+@import "elements/_header.scss";
+@import "elements/_header__branding.scss";
+@import "elements/_header__navigation.scss";
+@import "elements/_header__navigation-toggle.scss";
+@import "elements/_text-with-image.scss";
+@import "elements/_headline.scss";
+@import "elements/_image-carousel.scss";
+@import "elements/_logo-carousel.scss";
+@import "elements/_trainings.scss";
+@import "elements/_locations.scss";
+@import "elements/_code.scss";
+@import "elements/_features.scss";
+@import "elements/_footer.scss";
+@import "elements/_post.scss";
+
+body {
+  font-family: var(--font-family);
+}

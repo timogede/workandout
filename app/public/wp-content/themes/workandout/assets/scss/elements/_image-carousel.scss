@@ -1,0 +1,238 @@
+.image-carousel {
+  margin-bottom: 100px;
+  h3 {
+    font-weight: var(--font-weight-bold);
+    font-size: 32px;
+    text-transform: uppercase;
+    margin: 0;
+  }
+  p {
+    font-size: 16px;
+    margin: 5px 0 30px 0;
+  }
+  a.button {
+    margin: 0;
+    font-size: 16px;
+    @include viewport-4 {
+      font-size: 14px;
+    }
+    @include viewport-7 {
+      font-size: 18px;
+    }
+  }
+}
+
+.image-carousel__item {
+  position: relative;
+  cursor: pointer;
+}
+
+.image-carousel__flip-container:after {
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+  margin: 0 auto;
+  width: 40%;
+  height: 350px;
+  border: 5px solid var(--black);
+  z-index: 110;
+  pointer-events: none;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 300ms;
+}
+
+.image-carousel__description {
+  box-sizing: border-box;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  padding: 20px;
+  @include viewport-14 {
+    padding: 40px;
+  }
+  h4 {
+    font-weight: var(--font-weight-bold);
+    font-size: 26px;
+    text-transform: uppercase;
+    margin: 0 0 10px 0;
+  }
+  a {
+    opacity: 1 !important;
+    visibility: visible !important;
+    color: var(--brand-primary);
+  }
+  p {
+    font-size: 18px;
+    line-height: 1.6;
+    opacity: 1 !important;
+    visibility: visible !important;
+    @include viewport-14 {
+      font-size: 22px;
+    }
+    em {
+      font-style: italic;
+    }
+  }
+}
+
+.image-carousel__flip {
+  transform-style: preserve-3d;
+  transition: 0.3s;
+}
+
+.image-carousel__item--active .image-carousel__flip {
+  transform: rotateY(180deg);
+}
+
+.image-carousel__image {
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  backface-visibility: hidden;
+  height: 550px;
+  background-position: right;
+  opacity: 0.6;
+  transition: all 300ms;
+  backface-visibility: hidden;
+  @media (min-width: 580px) {
+    height: 450px;
+  }
+  @include viewport-7 {
+    height: 450px;
+  }
+  @include viewport-9 {
+    height: 550px;
+  }
+  @include viewport-14 {
+    height: 750px;
+  }
+}
+
+.image-carousel__short-description {
+  text-align: center;
+  padding: 10px;
+  padding-bottom: 50px;
+}
+
+.image-carousel__hand svg {
+  fill: var(--brand-primary);
+  width: 35%;
+  position: absolute;
+  left: -30px;
+  bottom: 15%;
+  -webkit-transform: translateX(30%);
+  transform: translateX(30%);
+  z-index: 120;
+  .text {
+    display: none;
+  }
+}
+
+.image-carousel__hand-color--white {
+  svg .hand {
+    fill: white;
+  }
+}
+
+.image-carousel__hand-color--black {
+  svg .hand {
+    fill: var(--black);
+  }
+}
+
+.image-carousel__hand-color--brand {
+  svg .hand {
+    fill: var(--brand-primary);
+  }
+}
+
+.image-carousel__hand-color--blue {
+  svg .hand {
+    fill: var(--blue);
+  }
+}
+
+.image-carousel__hand-color--hide {
+  svg .hand {
+    display: none;
+  }
+}
+
+.image-carousel__short-description {
+  svg {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 300ms;
+  }
+  p,
+  a {
+    @include viewport-7 {
+      visibility: hidden;
+      opacity: 0;
+      transition: all 300ms;
+    }
+  }
+}
+
+.image-carousel__item:hover {
+  p,
+  a,
+  svg,
+  .image-carousel__image,
+  .image-carousel__flip-container:after {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.image-carousel__item:hover .image-carousel__flip-container:after {
+  width: 80%;
+}
+
+.image-carousel__item--active {
+  svg {
+    transform: translateX(-30%) rotate(-15deg);
+  }
+  .image-carousel__flip-container:after {
+    opacity: 0 !important;
+    visibility: hidden !important;
+  }
+}
+
+.image-carousel__slick-arrows {
+  svg {
+    width: 25px;
+    height: auto;
+    path {
+      fill: var(--dark-gray);
+    }
+  }
+  .prev-arrow {
+    left: 10px;
+    transform: rotateY(180deg);
+  }
+
+  .next-arrow {
+    right: 10px;
+  }
+}
+
+.image-carousel__slick-arrow {
+  position: absolute;
+  z-index: 5;
+  bottom: 0;
+}
+
+.image-carousel__short-description p {
+  font-size: 16px;
+  @include viewport-14 {
+    font-size: 20px;
+  }
+}

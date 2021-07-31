@@ -1,0 +1,72 @@
+//breakpoints
+@mixin viewport-4 {
+  @media (min-width: 480px) {
+    @content;
+  }
+}
+@mixin viewport-7 {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+@mixin viewport-9 {
+  @media (min-width: 992px) {
+    @content;
+  }
+}
+@mixin viewport-12 {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+@mixin viewport-14 {
+  @media (min-width: 1400px) {
+    @content;
+  }
+}
+
+@mixin viewport-0 {
+  @media (max-width: 479px) {
+    @content;
+  }
+}
+
+@mixin viewport-7-max {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+//margins
+@mixin margin {
+  margin-bottom: 25px;
+  @include viewport-4 {
+    margin-bottom: 50px;
+  }
+}
+
+:root {
+  //headline
+  --font-family: "Heebo", sans-serif;
+  --font-weight-thin: 100;
+  --font-weight-regular: 400;
+  --font-weight-bold: 900;
+  //body
+  // --font-family-body: 'Merriweather', sans-serif;
+  // --font-weight-body: 400;
+  // --font-weight-body-bold: 700;
+  //colors
+  --brand-primary: #e1dd00;
+  --brand-secondary: ;
+  --white: #fff;
+  --gray: #e3e3e3;
+  --dark-gray: #a7a7a7;
+  --black: #333333;
+  --blue: #2025fc;
+  --fa-primary-color: #e1dd00;
+  //margins
+  --margin-mobile: 25px;
+  --margin-desktop: 50px;
+  //styles
+  --shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}

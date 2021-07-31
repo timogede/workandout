@@ -1,0 +1,21 @@
+header.header {
+  margin: 0;
+  padding: 0 20px;
+  background-color: var(--white);
+  z-index: 100;
+}
+
+.header__inside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header__branding {
+}
+
+.header__navigation {
+}
+
+.header__navigation-toggle {
+}

@@ -1,0 +1,250 @@
+.trainings {
+  margin-bottom: 50px;
+}
+.training-list {
+  padding: 0;
+}
+
+.training-name,
+.training-number {
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: var(--font-weight-bold);
+  cursor: pointer;
+}
+.active .training-name,
+.active .training-number {
+  margin-bottom: 1rem;
+}
+.training-number {
+}
+.active .training-number {
+  border-color: var(--brand-primary);
+}
+.training-name {
+  text-transform: uppercase;
+  position: relative;
+  flex-grow: 1;
+  margin: 0 0 10px 0;
+}
+.training-name:after {
+  display: inline-block;
+  content: "";
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 44'%3E%3Cpath d='M27 22L5 44l-2.1-2.1L22.8 22 2.9 2.1 5 0l22 22z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  width: 1rem;
+  height: 1rem;
+  position: absolute;
+  right: 0;
+  top: 10px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.active .training-name:after {
+  right: 3px;
+  transform: rotate(90deg);
+}
+.training-description,
+.training-details {
+  flex-basis: 100%;
+  visibility: hidden;
+  opacity: 0;
+  max-height: 0;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.active .training-description,
+.active .training-details {
+  margin-bottom: 1rem;
+  max-height: 1000px;
+  visibility: visible;
+  opacity: 1;
+}
+
+.active .training-description {
+  margin-top: 20px;
+  @media (min-width: 650px) {
+    margin-top: 20px;
+  }
+}
+dl.training-details {
+  display: grid;
+  grid-template-columns: max-content auto;
+  margin: 0;
+}
+dl.training-details dt {
+  grid-column-start: 1;
+  padding: 0.5rem 1rem 0.5rem 0;
+  text-transform: uppercase;
+  font-weight: 700;
+  min-width: 130px;
+  @media (min-width: 650px) {
+    min-width: initial;
+  }
+}
+dl.training-details dd {
+  grid-column-start: 2;
+  padding: 0.5rem 0;
+}
+.training-short-description {
+  visibility: hidden;
+  opacity: 0;
+  max-height: 0;
+  margin: 0;
+}
+.personal-training {
+}
+.personal-training h3 {
+  line-height: 34px;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+//viewport
+.training-list {
+  @media (min-width: 650px) {
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: -40px;
+  }
+}
+.training,
+.training-list {
+}
+.training {
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #a0a0a0;
+  padding: 30px 0;
+  transition: all 0.1s cubic-bezier(0.4, 0, 0.2, 1);
+  @media (min-width: 650px) {
+    flex-direction: column;
+    text-align: center;
+    border: 5px solid var(--black);
+    background: #fff;
+    flex-basis: 18%;
+    position: relative;
+    z-index: 10;
+    padding: 30px 10px;
+    flex-basis: 49%;
+    margin: 0 0 2% 0;
+  }
+  @include viewport-12 {
+    flex-basis: 49%;
+    margin: 0 0 2% 0;
+  }
+}
+.training.active {
+  @media (min-width: 650px) {
+    padding: 30px 20px;
+  }
+}
+.training-number {
+  width: 40px;
+  height: 40px;
+  line-height: 1.7;
+  border-radius: 50%;
+  background: var(--brand-primary);
+  text-align: center;
+  flex-shrink: 0;
+  margin-right: 1rem;
+  @media (min-width: 650px) {
+    margin: 50px auto 20px auto;
+    transition: all 0.1s cubic-bezier(0.4, 0, 0.2, 1);
+    border-color: var(--brand-primary);
+  }
+}
+.active .training-number {
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  font-size: 42px;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  @media (min-width: 650px) {
+    margin-top: 2rem;
+  }
+}
+.active .training-name {
+  font-size: 38px;
+  margin-bottom: 25px;
+}
+.training-name:after {
+  display: none;
+}
+dl.training-details {
+  visibility: hidden;
+  opacity: 0;
+  max-height: 0;
+  text-align: left;
+}
+.active dl.training-details {
+  visibility: visible;
+  opacity: 1;
+  height: auto;
+  height: 100px;
+}
+dl.training-details dd {
+  text-align: left;
+  margin-left: 30px;
+  @media (min-width: 650px) {
+    text-align: right;
+    margin-left: 0;
+  }
+}
+.active dl.training-details dd {
+  padding: 0;
+  margin: 8px 0;
+}
+.active dl.training-details dt {
+  padding: 0;
+  margin: 8px 0;
+}
+.dot {
+  height: 10px;
+  width: 10px;
+  border: 1px solid var(--black);
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 25px;
+  &.is-active {
+    background-color: var(--black);
+  }
+}
+.training-short-description {
+  visibility: visible;
+  opacity: 1;
+  max-height: 100px;
+  font-size: 18px;
+}
+.active .training-short-description {
+  visibility: hidden;
+  opacity: 0;
+  max-height: 0;
+}
+.training-icon {
+  position: absolute;
+  right: 0;
+  @media (min-width: 650px) {
+    position: relative;
+    visibility: visible;
+    opacity: 1;
+    max-height: 100px;
+    margin: 2rem auto 1rem;
+  }
+}
+.active .training-icon {
+  visibility: hidden;
+  opacity: 0;
+  max-height: 0;
+  margin: 0;
+}
+.personal-training {
+  display: inline-block;
+  min-width: 300px;
+  margin: 0 0 30px 0;
+  border: 5px solid var(--black);
+  padding: 30px 30px 50px 30px;
+}

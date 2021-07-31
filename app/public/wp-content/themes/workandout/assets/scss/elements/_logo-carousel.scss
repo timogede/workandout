@@ -1,0 +1,34 @@
+.logo-carousel {
+  margin: 20px 0;
+}
+
+.logo-carousel__items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  @include viewport-4 {
+    flex-direction: row;
+  }
+}
+
+.logo-carousel__item {
+  width: 100%;
+  text-align: center;
+  margin: 25px 0;
+
+  @include viewport-7 {
+    width: 50%;
+  }
+  @include viewport-9 {
+    width: 33%;
+  }
+}
+
+.logo-carousel__item img {
+  filter: grayscale(1);
+  &:hover {
+    filter: grayscale(0);
+  }
+}

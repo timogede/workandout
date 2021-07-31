@@ -1,0 +1,21 @@
+{
+  "name": "workandout",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "scss": "node-sass --watch app/public/wp-content/themes/workandout/assets/scss/ -o app/public/wp-content/themes/workandout/",
+    "livereload": "livereload",
+    "dev": "concurrently --kill-others \"npm run livereload\" \"npm run scss\" "
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
+  },
+  "dependencies": {
+    "concurrently": "^5.3.0",
+    "livereload": "^0.9.1",
+    "node-sass": "^6.0.1"
+  }
+}
