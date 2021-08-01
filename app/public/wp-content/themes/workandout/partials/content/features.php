@@ -26,9 +26,9 @@ $feature_count = count($items['value']);
                 $items['value'] as $item
             ): ?>
             <div class="features__item">
-                <h3 class="features__headline">
-                    <?php if ($item['headline']): ?><?= $item['headline'] ?> <?php endif; ?>
-                </h3>
+                <div class="features__headline-wrap">
+                    <?php if ($item['headline']): ?><h3><?= $item['headline'] ?></h3><?php endif; ?>
+                </div>
                 <div class="features__subline-wrap">
                     <?php if ($item['subline']): ?><?= $item['subline'] ?> <?php endif; ?>
                 </div>
@@ -38,7 +38,7 @@ $feature_count = count($items['value']);
                 <div class="features__price-wrap">
                     <?php if ($item['price']): ?><?= $item['price'] ?> <?php endif; ?>
                 </div>
-                <div class="features__button">
+                <div class="features__button-wrap">
                     <?php if ($item['button_text']): ?>
                         <a class="features__button button button--<?=$item['button_color'] ?>" href="<?=$item['button_link'] ?>"><?= $item['button_text'] ?></a>
                     <?php endif; ?>

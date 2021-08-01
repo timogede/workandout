@@ -1405,6 +1405,14 @@ dl.training-details dd {
     .feature__items--items-4 .features__item {
       width: 24%; } }
 
+.features__headline-wrap {
+  height: 50px; }
+  .features__headline-wrap h3 {
+    margin: 0; }
+
+.features__subline-wrap {
+  height: 100px; }
+
 .site-footer {
   margin: 100px 0 0 0; }
 
