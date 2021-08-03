@@ -35,6 +35,17 @@ $feature_count = count($items['value']);
                 <div class="features__list-wrap">
                     <?php if ($item['list']): ?><?= $item['list'] ?> <?php endif; ?>
                 </div>
+                
+                <div class="features__more-wrap">
+                    <p>Mehr Info</p>
+                        <?php if ($item['more_info']): ?>
+                </div>
+
+                <div class="features__more-content">
+                    <?= $item['more_info'] ?> 
+                    <?php endif; ?>
+                </div>
+   
                 <div class="features__price-wrap">
                     <?php if ($item['price']): ?><?= $item['price'] ?> <?php endif; ?>
                 </div>
@@ -46,10 +57,12 @@ $feature_count = count($items['value']);
             </div>
             <?php endforeach; endif; ?>
         </div>
-        <?php if ($extra_text):?>
+       
         <div class="features__extra-text">
+        <?php if ($extra_text):?>
             <p><?=$extra_text?></p>
-        </div>
         <?php endif; ?>
+        </div>
+     
     </div>
 </article>

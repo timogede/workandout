@@ -22,6 +22,16 @@ $(document).ready(function () {
     $(this).addClass("active");
   });
 
+  //toggle open more info features box
+  $(".features__more-wrap").click(function () {
+    if ($(this).hasClass("open")) {
+      $(this).removeClass("open");
+      return;
+    }
+    $(".features__more-wrap").removeClass("open");
+    $(this).addClass("open");
+  });
+
   //slick
   $(".image-carousel__items").slick({
     dots: false,
