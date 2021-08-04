@@ -16,12 +16,14 @@ if (!empty($block['anchor'])) {
 }
 $extra_text = get_field('extra_text')?: '';
 $items = get_field_object('items');
+$element_headline = get_field('element_headline')?: '';
 //count amount if items so that i can add class
 $textbox_count = count($items['value']);
 ?>
 <article class="text-box container">
     <div class="text-box__inside container__inside" id="<?=$id?>">
-        <div class="text-box__items text-box__items--items-<?=$text-box_count?>">
+    <?php if ($element_headline): ?><h2><?= $element_headline ?></h2><?php endif; ?>
+        <div class="text-box__items text-box__items--items-<?=$textbox_count?>">
         <?php if (is_array($items['value'])): foreach (
                 $items['value'] as $item
             ): ?>
