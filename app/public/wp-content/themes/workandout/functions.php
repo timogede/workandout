@@ -8,6 +8,7 @@ function add_to_head() { ?>
 <link href="https://fonts.googleapis.com/css?family=Merriweather:400,400i,700,700i|Montserrat:400,400i,900,900i&display=swap" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="/wp-content/themes/workandout/style.css">
 <script type="text/javascript" src="/wp-content/themes/workandout/assets/js/jquery-3.3.1.min.js"></script>
+<script src="https://kit.fontawesome.com/83ca355e87.js" crossorigin="anonymous"></script>
 
 
 

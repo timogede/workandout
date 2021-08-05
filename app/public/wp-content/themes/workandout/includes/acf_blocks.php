@@ -57,6 +57,15 @@ function theme_acf_init()
             'render_template' => $filepath,
             'category' => $category,
             'mode' => 'edit',
+             // Just add this and you'll get the block preview:
+             'example'  => array(
+                'attributes' => array(
+                    'mode' => 'preview',
+                    'data' => array(
+                        'preview_image_help' => '/wp-content/themes/workandout/partials/content/previews/' . $name . '.jpg',
+                    )
+                )
+                    ),
             'supports' => [
                 'align' => false
             ]

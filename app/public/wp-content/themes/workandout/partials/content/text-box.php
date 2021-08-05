@@ -41,7 +41,7 @@ $textbox_count = count($items['value']);
        
         <div class="text-box__extra-text">
         <?php if ($extra_text):?>
-            <p><?=$extra_text?></p>
+            <?=$extra_text?>
         <?php endif; ?>
         </div>
      
