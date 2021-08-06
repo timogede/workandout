@@ -9,7 +9,12 @@
  *
  * @var $block array
  */
+if( isset( $block['data']['preview_image_help'] )  ) :    /* rendering in inserter preview  */
 
+    echo '<img src="'. $block['data']['preview_image_help'] .'" style="width:100%; height:auto;">';
+
+
+else : /* rendering in editor body */
 $id = 'text-box--' . $block['id'];
 if (!empty($block['anchor'])) {
     $id = $block['anchor'];
@@ -47,3 +52,4 @@ $textbox_count = count($items['value']);
      
     </div>
 </article>
+<?php endif;?>

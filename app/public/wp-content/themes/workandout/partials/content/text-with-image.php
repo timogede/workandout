@@ -9,7 +9,12 @@
  *
  * @var $block array
  */
+if( isset( $block['data']['preview_image_help'] )  ) :    /* rendering in inserter preview  */
 
+    echo '<img src="'. $block['data']['preview_image_help'] .'" style="width:100%; height:auto;">';
+
+
+else : /* rendering in editor body */
 $id = 'text-with-image--' . $block['id'];
 if (!empty($block['anchor'])) {
     $id = $block['anchor'];
@@ -65,3 +70,4 @@ $image_position = get_field('image_position') ?: 'left';
         </div>
     </div>
 </article>
+<?php endif;?>

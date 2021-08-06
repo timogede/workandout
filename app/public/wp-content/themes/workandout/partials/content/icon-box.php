@@ -9,12 +9,17 @@
  *
  * @var $block array
  */
+if( isset( $block['data']['preview_image_help'] )  ) :    /* rendering in inserter preview  */
 
+    echo '<img src="'. $block['data']['preview_image_help'] .'" style="width:100%; height:auto;">';
+
+
+else : /* rendering in editor body */
 $id = 'icon-box--' . $block['id'];
 if (!empty($block['anchor'])) {
     $id = $block['anchor'];
 }
-$extra_icon = get_field('extra_icon')?: '';
+$extra_text = get_field('extra_text')?: '';
 $items = get_field_object('items');
 $element_headline = get_field('element_headline')?: '';
 //count amount if items so that i can add class
@@ -34,17 +39,16 @@ $iconbox_count = count($items['value']);
                 <div class="icon-box__headline-wrap">
                     <?php if ($item['headline']): ?><h3><?= $item['headline'] ?></h3><?php endif; ?>
                 </div>
-            
-              
             </div>
             <?php endforeach; endif; ?>
         </div>
        
-        <div class="icon-box__extra-icon">
-        <?php if ($extra_icon):?>
-            <?=$extra_icon?>
+        <div class="icon-box__extra-text">
+        <?php if ($extra_text):?>
+            <?=$extra_text?>
         <?php endif; ?>
         </div>
      
     </div>
 </article>
+<?php endif; ?>

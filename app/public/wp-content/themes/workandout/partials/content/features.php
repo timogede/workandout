@@ -9,7 +9,12 @@
  *
  * @var $block array
  */
+if( isset( $block['data']['preview_image_help'] )  ) :    /* rendering in inserter preview  */
 
+    echo '<img src="'. $block['data']['preview_image_help'] .'" style="width:100%; height:auto;">';
+
+
+else : /* rendering in editor body */
 $id = 'features--' . $block['id'];
 if (!empty($block['anchor'])) {
     $id = $block['anchor'];
@@ -66,3 +71,4 @@ $feature_count = count($items['value']);
      
     </div>
 </article>
+<?php endif; ?>
