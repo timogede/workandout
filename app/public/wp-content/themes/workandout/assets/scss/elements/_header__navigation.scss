@@ -5,7 +5,7 @@
     display: block;
   }
 
-  .menu-main-container ul {
+  .menu-main-container > ul {
     display: flex;
     flex-direction: column;
     list-style-type: none;
@@ -23,6 +23,7 @@
       align-content: space-around;
     }
     li {
+      position: relative;
       margin-bottom: 30px;
       @include viewport-7 {
         margin-bottom: 0;
@@ -34,7 +35,7 @@
         font-weight: var(--font-weight-bold);
         @include viewport-7 {
           color: var(--black);
-          font-size: 20px;
+          font-size: 18px;
         }
         @include viewport-9 {
           font-size: 24px;
@@ -63,6 +64,46 @@
       height: inherit;
       position: inherit;
       background-color: initial;
+    }
+  }
+}
+
+.menu-main-container > ul > li > ul {
+  visibility: hidden;
+  height: 0;
+  position: absolute;
+  list-style-type: none;
+  margin-left: 10px;
+  padding-top: 10px;
+  li {
+    padding: 6px 0;
+  }
+  li > a {
+    font-size: 18px !important;
+    text-transform: none !important;
+  }
+}
+
+.menu-main-container > ul > li:hover {
+  ul {
+    visibility: visible;
+    height: initial;
+  }
+}
+
+.menu-main-container > ul > li.menu-item-has-children {
+  &:after {
+    @include viewport-7 {
+      content: "";
+      background-image: url("/wp-content/themes/workandout/assets/images/chevron-right-regular.svg");
+      width: 8px;
+      height: 15px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      position: absolute;
+      transform: rotate(90deg);
+      right: -14px;
+      top: 4px;
     }
   }
 }
