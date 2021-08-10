@@ -32,6 +32,16 @@ $(document).ready(function () {
     $(this).addClass("open");
   });
 
+  //toggle accordion open
+  $(".accordion__headline-wrap").click(function () {
+    if ($(this).parent().hasClass("open")) {
+      $(this).parent().removeClass("open");
+      return;
+    }
+    $(".accordion__item").removeClass("open");
+    $(this).parent().addClass("open lll");
+  });
+
   //slick
   $(".image-carousel__items").slick({
     dots: false,
@@ -75,5 +85,21 @@ $(document).ready(function () {
         },
       },
     ],
+  });
+
+  //slick
+  $(".location-box__items").slick({
+    dots: true,
+    autoplaySpeed: 3500,
+    fade: false,
+    cssEase: "ease-out",
+    autoplay: false,
+    pauseOnFocus: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    infinite: false,
+    prevArrow: $(".location-box__slick-arrow.prev-arrow"),
+    nextArrow: $(".location-box__slick-arrow.next-arrow"),
+    arrows: true,
   });
 });
