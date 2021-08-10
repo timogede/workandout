@@ -19,6 +19,7 @@ $id = 'location-box--' . $block['id'];
 if (!empty($block['anchor'])) {
     $id = $block['anchor'];
 }
+$menu_link_id = get_field('menu_link_id')?: '';
 $items = get_field_object('items');
 $color = get_field('color')?: '';
 $headline = get_field('headline')?: '';
@@ -28,18 +29,21 @@ $trainer_image = get_field('trainer_image')?: '';
 $subline = get_field('subline')?: '';
 $button = get_field('button')?: '';
 $button_link = get_field('button_link')?: '';
-
+$order = get_field('order');
+$extra_text_left = get_field('extra_text_left');
+$extra_text_right = get_field('extra_text_right');
+$description = get_field('description')?: '';
 ?>
-<article class="location-box container location-box__color--<?=$color?>">
+<article class="location-box container location-box__color--<?=$color?> location-box__image-order--<?=$order?>" id=<?$menu_link_id?>>
     <div class="location-box__inside" id="<?=$id?>">
         <div class="location-box__columns">
-
-
 
             <div class="location-box__column location-box__column-1">
                 <div class="location-box__column-wrap">
                     <h2><?=$headline?></h2>
-
+                    <div class="location-box__description-wrap">
+                            <?=$description?>
+                    </div>
                     <div class="location-box__days-trainer__wrap">
                     <?php if (in_array("mo", $days)):?>                           
                         <div class="location-box__days-trainer__item">
@@ -105,6 +109,7 @@ $button_link = get_field('button_link')?: '';
                         </a>
                     <?php endif; ?>
                 </div>
+             
             </div>
 
 
@@ -128,8 +133,19 @@ $button_link = get_field('button_link')?: '';
 
         </div>
        
-      
-     
+                <div class="location-box__extra-columns">
+                    <div class="location-box__extra-column location-box__extra-column-1">
+                        <div class="location-box__extra-text-left">
+                            <?=$extra_text_left?>
+                        </div>
+                    </div>
+                    <div class="location-box__extra-column location-box__extra-column-2">
+                        <div class="location-box__extra-text-right">
+                            <?=$extra_text_right?>
+                        </div>
+                    </div>
+                </div>
+
     </div>
 </article>
 <?php endif; ?>

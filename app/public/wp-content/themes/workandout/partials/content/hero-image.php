@@ -20,6 +20,7 @@ $id = 'hero-image--' . $block['id'];
 if (!empty($block['anchor'])) {
     $id = $block['anchor'];
 }
+$menu_link_id = get_field('menu_link_id')?: '';
 $extra_text = get_field('extra_text')?: '';
 $color = get_field('color')?: '';
 $image = get_field('image')?: '';
@@ -30,7 +31,7 @@ $darken = get_field('darken');
 
 
 ?>
-<article class="hero-image container hero-image__color--<?=$color?>" style="background-image:url(<?php if ($image): ?><?= $image['url'] ?> <?php endif; ?>); background-position:<?php if ($image_alignment): ?><?= $image_alignment ?> <?php endif; ?>">
+<article class="hero-image container hero-image__color--<?=$color?>" style="background-image:url(<?php if ($image): ?><?= $image['url'] ?> <?php endif; ?>); background-position:<?php if ($image_alignment): ?><?= $image_alignment ?> <?php endif; ?>" id=<?$menu_link_id?>>
     <div class="hero-image__darken" style="background-color: black; opacity: <?=$darken?>"></div>
     <div class="hero-image__inside container__inside" id="<?=$id?>">
     <div class="hero-image__content">

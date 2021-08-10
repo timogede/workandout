@@ -19,11 +19,11 @@ $id = 'logo-carousel--' . $block['id'];
 if (!empty($block['anchor'])) {
     $id = $block['anchor'];
 }
-
+$menu_link_id = get_field('menu_link_id')?: '';
 $items = get_field_object('items');
 ?>
 
-<article class="logo-carousel container">
+<article class="logo-carousel container" id=<?$menu_link_id?>>
     <div class="logo-carousel__inside container__inside">
     <div class="logo-carousel__items">
             <?php if (is_array($items['value'])): foreach (

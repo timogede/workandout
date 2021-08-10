@@ -19,7 +19,7 @@ $id = 'text-with-image--' . $block['id'];
 if (!empty($block['anchor'])) {
     $id = $block['anchor'];
 }
-
+$menu_link_id = get_field('menu_link_id')?: '';
 $headline = get_field('headline') ?: '';
 $text = get_field('text') ?: '';
 $image = get_field('image');
@@ -31,7 +31,7 @@ $button_2_link = get_field('button_2_link')?: '';
 $button_2_color = get_field('button_2_color')?: 'white';
 $image_position = get_field('image_position') ?: 'left';
 ?>
-<article class="text-with-image container--margin text-with-image--image-<?= $image_position ?> image-full-width margin-bottom">
+<article class="text-with-image container--margin text-with-image--image-<?= $image_position ?> image-full-width margin-bottom" id=<?$menu_link_id?>>
     <div class="text-with-image__inside container__inside" id="<?=$id?>">
 
         <div class="text-with-image__columns">

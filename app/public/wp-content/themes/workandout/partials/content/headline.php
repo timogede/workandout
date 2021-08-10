@@ -19,7 +19,7 @@ $id = 'headline--' . $block['id'];
 if (!empty($block['anchor'])) {
     $id = $block['anchor'];
 }
-
+$menu_link_id = get_field('menu_link_id')?: '';
 $headline = get_field('headline') ?: '';
 $subline = get_field('subline') ?: '';
 $color = get_field('color')?: 'black';
@@ -31,7 +31,7 @@ if ($hand_selector){
     $push = false;
 }
 ?>
-<article class="headline container headline--color-<?= $color ?> headline--alignment-<?= $alignment ?> headline-push--<?php if ($push): ?>visible<?php endif; ?> headline-hand--<?php if ($hand_selector): ?>visible<?php endif; ?>">
+<article class="headline container headline--color-<?= $color ?> headline--alignment-<?= $alignment ?> headline-push--<?php if ($push): ?>visible<?php endif; ?> headline-hand--<?php if ($hand_selector): ?>visible<?php endif; ?>" id=<?$menu_link_id?>>
     <div class="headline__inside container__inside" id="<?=$id?>">
             <div class="headline__text-column headline__column">
                 <div class="headline__text-wrap">

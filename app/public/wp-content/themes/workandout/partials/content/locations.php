@@ -19,7 +19,7 @@ $id = 'locations--' . $block['id'];
 if (!empty($block['anchor'])) {
     $id = $block['anchor'];
 }
-
+$menu_link_id = get_field('menu_link_id')?: '';
 $city_items = get_field_object('city_items');
 $location_items = get_field_object('location_items');
 $total_locations = 0;
@@ -42,7 +42,7 @@ console_log($total_locations);
 
 
 
-<article class="locations container">
+<article class="locations container" id=<?$menu_link_id?>>
     <div class="locations_inside container__inside">
         <div class="locations__city__items">
             <?php if (is_array($city_items['value'])): foreach (

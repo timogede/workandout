@@ -400,6 +400,11 @@ template {
   background-color: var(--blue);
   border-color: var(--blue); }
 
+.button--cyan {
+  color: white;
+  background-color: var(--cyan);
+  border-color: var(--cyan); }
+
 .container {
   position: relative;
   width: 100%; }
@@ -498,8 +503,9 @@ header.header {
   height: 0;
   position: absolute;
   list-style-type: none;
-  margin-left: 10px;
-  padding-top: 10px; }
+  padding: 10px 20px;
+  white-space: nowrap;
+  background-color: white; }
   .menu-main-container > ul > li > ul li {
     padding: 6px 0; }
   .menu-main-container > ul > li > ul li > a {
@@ -2077,7 +2083,8 @@ dl.training-details dd {
 .accordion__headline-wrap {
   background-color: var(--gray);
   padding: 20px 40px 20px 20px;
-  position: relative; }
+  position: relative;
+  cursor: pointer; }
   .accordion__headline-wrap:after {
     content: "^";
     position: absolute;
@@ -2238,7 +2245,8 @@ dl.training-details dd {
   position: absolute;
   z-index: 5;
   top: 50%;
-  transform: translateY(-50%); }
+  transform: translateY(-50%);
+  cursor: pointer; }
 
 .location-box__column-2 {
   position: relative; }
@@ -2278,6 +2286,38 @@ dl.training-details dd {
 
 .location-box__color--cyan .slick-dots .slick-active button {
   background-color: var(--cyan); }
+
+.location-box__image-order--right .location-box__column-1 {
+  order: 1; }
+
+.location-box__image-order--right .location-box__column-2 {
+  order: 2; }
+
+.location-box__image-order--left .location-box__column-1 {
+  order: 2; }
+
+.location-box__image-order--left .location-box__column-2 {
+  order: 1; }
+
+.location-box__extra-columns {
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column; }
+  @media (min-width: 768px) {
+    .location-box__extra-columns {
+      flex-direction: row; } }
+
+.location-box__extra-column {
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  text-align: center; }
+  @media (min-width: 768px) {
+    .location-box__extra-column {
+      width: 50%; } }
+
+.location-box__description-wrap ul li {
+  padding-bottom: 10px; }
 
 .site-footer {
   margin: 100px 0 0 0; }
@@ -2522,3 +2562,6 @@ dl.training-details dd {
 
 body {
   font-family: var(--font-family); }
+
+html {
+  scroll-behavior: smooth; }

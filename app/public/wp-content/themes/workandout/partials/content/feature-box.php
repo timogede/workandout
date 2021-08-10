@@ -19,6 +19,7 @@ $id = 'feature-box--' . $block['id'];
 if (!empty($block['anchor'])) {
     $id = $block['anchor'];
 }
+$menu_link_id = get_field('menu_link_id')?: '';
 $extra_text = get_field('extra_text')?: '';
 $extra_text_link = get_field('extra_text_link')?: '';
 $items = get_field_object('items');
@@ -31,7 +32,7 @@ if(!empty($items['value'])) {
 }
 
 ?>
-<article class="feature-box container feature-box__color--<?=$color?>">
+<article class="feature-box container feature-box__color--<?=$color?>" id=<?$menu_link_id?>>
     <div class="feature-box__inside container__inside" id="<?=$id?>">
     <?php if ($element_subline): ?><h4><?= $element_subline ?></h4><?php endif; ?>
     <?php if ($element_headline): ?>
