@@ -31,7 +31,7 @@ $darken = get_field('darken');
 
 
 ?>
-<article class="hero-image container hero-image__color--<?=$color?>" style="background-image:url(<?php if ($image): ?><?= $image['url'] ?> <?php endif; ?>); background-position:<?php if ($image_alignment): ?><?= $image_alignment ?> <?php endif; ?>" id=<?$menu_link_id?>>
+<article class="hero-image container hero-image__color--<?=$color?>" style="background-image:url(<?php if ($image): ?><?= $image['url'] ?> <?php endif; ?>); background-position:<?php if ($image_alignment): ?><?= $image_alignment ?> <?php endif; ?>" id=<?=$menu_link_id?>>
     <div class="hero-image__darken" style="background-color: black; opacity: <?=$darken?>"></div>
     <div class="hero-image__inside container__inside" id="<?=$id?>">
     <div class="hero-image__content">

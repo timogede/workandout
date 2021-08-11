@@ -24,7 +24,7 @@ $menu_link_id = get_field('menu_link_id')?: '';
 $code_content = get_field('code_content') ?: '';
 
 ?>
-<article class="code container" id=<?$menu_link_id?>>
+<article class="code container" id=<?=$menu_link_id?>>
     <div class="code__inside container__inside" id="<?=$id?>">
         <div class="code__wrap">
         <?php if ($code_content): ?>

@@ -23,6 +23,7 @@ $menu_link_id = get_field('menu_link_id')?: '';
 $items = get_field_object('items');
 $color = get_field('color')?: '';
 $headline = get_field('headline')?: '';
+$topline = get_field('topline')?: '';
 $days = get_field('days');
 $trainer_name = get_field('trainer_name')?: '';
 $trainer_image = get_field('trainer_image')?: '';
@@ -34,11 +35,14 @@ $extra_text_left = get_field('extra_text_left');
 $extra_text_right = get_field('extra_text_right');
 $description = get_field('description')?: '';
 ?>
-<article class="location-box container location-box__color--<?=$color?> location-box__image-order--<?=$order?>" id=<?$menu_link_id?>>
+<article class="location-box container location-box__color--<?=$color?> location-box__image-order--<?=$order?>" id=<?=$menu_link_id?>>
     <div class="location-box__inside" id="<?=$id?>">
         <div class="location-box__columns">
 
             <div class="location-box__column location-box__column-1">
+                <div class="location-box__topline">
+                    <?=$topline?>
+                </div>
                 <div class="location-box__column-wrap">
                     <h2><?=$headline?></h2>
                     <div class="location-box__description-wrap">

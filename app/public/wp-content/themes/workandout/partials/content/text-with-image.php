@@ -31,7 +31,7 @@ $button_2_link = get_field('button_2_link')?: '';
 $button_2_color = get_field('button_2_color')?: 'white';
 $image_position = get_field('image_position') ?: 'left';
 ?>
-<article class="text-with-image container--margin text-with-image--image-<?= $image_position ?> image-full-width margin-bottom" id=<?$menu_link_id?>>
+<article class="text-with-image container--margin text-with-image--image-<?= $image_position ?> image-full-width margin-bottom" id=<?=$menu_link_id?>>
     <div class="text-with-image__inside container__inside" id="<?=$id?>">
 
         <div class="text-with-image__columns">

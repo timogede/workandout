@@ -24,7 +24,7 @@ $items = get_field_object('items');
 ?>
 
 
-<article class="image-carousel container" id=<?$menu_link_id?>>
+<article class="image-carousel container" id=<?=$menu_link_id?>>
 <div class="image-carousel__slick-arrows">
         <div class="image-carousel__slick-arrow prev-arrow"><?php include( get_template_directory() . '/assets/images/chevron-right-regular.svg' ); ?></div>
         <div class="image-carousel__slick-arrow next-arrow"><?php include( get_template_directory() . '/assets/images/chevron-right-regular.svg' ); ?></div>

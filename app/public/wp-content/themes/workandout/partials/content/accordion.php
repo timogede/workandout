@@ -24,7 +24,7 @@ $menu_link_id = get_field('menu_link_id')?: '';
 $accordion_content = get_field('accordion_content') ?: '';
 
 ?>
-<article class="accordion container container--margin" id=<?$menu_link_id?>>
+<article class="accordion container container--margin" id=<?=$menu_link_id?>>
     <div class="accordion__inside container__inside" id="<?=$id?>">
     <div class="accordion__items">
         <?php if (is_array($items['value'])): foreach (

@@ -25,7 +25,7 @@ $items = get_field_object('items');
 //count amount if items so that i can add class
 $feature_count = count($items['value']);
 ?>
-<article class="features container" id=<?$menu_link_id?>>
+<article class="features container" id=<?=$menu_link_id?>>
     <div class="features__inside container__inside" id="<?=$id?>">
         <div class="features__items feature__items--items-<?=$feature_count?>">
         <?php if (is_array($items['value'])): foreach (

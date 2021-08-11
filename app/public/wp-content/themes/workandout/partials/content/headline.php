@@ -31,7 +31,7 @@ if ($hand_selector){
     $push = false;
 }
 ?>
-<article class="headline container headline--color-<?= $color ?> headline--alignment-<?= $alignment ?> headline-push--<?php if ($push): ?>visible<?php endif; ?> headline-hand--<?php if ($hand_selector): ?>visible<?php endif; ?>" id=<?$menu_link_id?>>
+<article class="headline container headline--color-<?= $color ?> headline--alignment-<?= $alignment ?> headline-push--<?php if ($push): ?>visible<?php endif; ?> headline-hand--<?php if ($hand_selector): ?>visible<?php endif; ?>" id=<?=$menu_link_id?>>
     <div class="headline__inside container__inside" id="<?=$id?>">
             <div class="headline__text-column headline__column">
                 <div class="headline__text-wrap">

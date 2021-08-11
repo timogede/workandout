@@ -32,7 +32,7 @@ if(!empty($items['value'])) {
 }
 
 ?>
-<article class="feature-box container feature-box__color--<?=$color?>" id=<?$menu_link_id?>>
+<article class="feature-box container feature-box__color--<?=$color?>" id=<?=$menu_link_id?>>
     <div class="feature-box__inside container__inside" id="<?=$id?>">
     <?php if ($element_subline): ?><h4><?= $element_subline ?></h4><?php endif; ?>
     <?php if ($element_headline): ?>

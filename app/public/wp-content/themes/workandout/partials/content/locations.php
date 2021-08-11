@@ -42,7 +42,7 @@ console_log($total_locations);
 
 
 
-<article class="locations container" id=<?$menu_link_id?>>
+<article class="locations container" id=<?=$menu_link_id?>>
     <div class="locations_inside container__inside">
         <div class="locations__city__items">
             <?php if (is_array($city_items['value'])): foreach (

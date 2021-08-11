@@ -28,7 +28,7 @@ $extra_box_button_link = get_field('extra_box_button_link')?: '';
 $items = get_field_object('items');
 $i = 0;
 ?>
-    <article class="trainings container" id=<?$menu_link_id?>>
+    <article class="trainings container" id=<?=$menu_link_id?>>
     <div class="trainings__inside container__inside" id="<?=$id?>">
       <div class="training-list">
       <?php if (is_array($items['value'])): foreach (

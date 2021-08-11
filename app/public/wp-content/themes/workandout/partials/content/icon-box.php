@@ -26,7 +26,7 @@ $element_headline = get_field('element_headline')?: '';
 //count amount if items so that i can add class
 $iconbox_count = count($items['value']);
 ?>
-<article class="icon-box container" id=<?$menu_link_id?>>
+<article class="icon-box container" id=<?=$menu_link_id?>>
     <div class="icon-box__inside container__inside" id="<?=$id?>">
     <?php if ($element_headline): ?><h2><?= $element_headline ?></h2><?php endif; ?>
         <div class="icon-box__items icon-box__items--items-<?=$iconbox_count?>">
